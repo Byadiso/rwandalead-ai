@@ -5,7 +5,7 @@ import {
 
 import {
   generateOutreach
-} from "../services/outreachService";
+} from "../services/outreach";
 
 export default function OutreachGenerator({
   leadId

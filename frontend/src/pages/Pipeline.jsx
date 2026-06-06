@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   getLeads,
   updateLeadStage
-} from "../services/leadService";
+} from "../services/lead";
 
 import Layout from "../components/Layout";
 
