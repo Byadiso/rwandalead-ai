@@ -10,9 +10,15 @@ class Lead(Base):
 
     __tablename__ = "leads"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(
+        Integer,
+        primary_key=True
+    )
 
-    campaign_id = Column(Integer, ForeignKey("campaigns.id"))
+    campaign_id = Column(
+        Integer,
+        ForeignKey("campaigns.id")
+    )
 
     business_name = Column(String)
 
@@ -30,4 +36,7 @@ class Lead(Base):
 
     service_gap = Column(String)
 
-    pipeline_stage = Column(String, default="NEW")
+    pipeline_stage = Column(
+        String,
+        default="NEW"
+    )
