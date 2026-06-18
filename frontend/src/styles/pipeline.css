@@ -1,0 +1,374 @@
+/* Container & Dashboard Structural Resets */
+.pipeline-page {
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 4px);
+}
+
+/* Page Dynamic Header */
+.pipeline-header {
+  margin-bottom: 32px;
+}
+
+.header-title-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon-badge {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.header-title-block h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.03em;
+}
+
+.header-title-block p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Aggregate Counter Cards row styles */
+.pipeline-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.stat-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+/* Counter indicator dot nodes */
+.status-indicator-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.status-indicator-dot.new { background-color: #3b82f6; }
+.status-indicator-dot.contacted { background-color: #f59e0b; }
+.status-indicator-dot.proposal { background-color: #a855f7; }
+.status-indicator-dot.won { background-color: #10b981; }
+.text-slate { color: #94a3b8; }
+
+/* Global Loading State Wrapper */
+.pipeline-loading-viewport {
+  text-align: center;
+  padding: 80px 0;
+  color: #64748b;
+}
+
+.pipeline-loading-viewport p {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Kanban Horizontal Board Viewport Alignment */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.kanban-column {
+  background-color: #f1f5f9;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px 14px 4px;
+}
+
+.column-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column-dot-marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #64748b;
+}
+
+/* Match Header Colors dynamically with states */
+.stage-new .column-dot-marker { background-color: #3b82f6; }
+.stage-contacted .column-dot-marker { background-color: #f59e0b; }
+.stage-proposal .column-dot-marker { background-color: #a855f7; }
+.stage-won .column-dot-marker { background-color: #10b981; }
+.stage-lost .column-dot-marker { background-color: #ef4444; }
+
+.column-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.column-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  background-color: #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.column-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.column-empty-placeholder {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #94a3b8;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Individual Kanban Card Structuring */
+.pipeline-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Update Screen Dimmer */
+.card-updating-dimmer {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.business-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.business-city {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* Priority Badges configuration overrides */
+.priority-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.priority-badge.high { background-color: #fef2f2; color: #ef4444; }
+.priority-badge.medium { background-color: #fffbeb; color: #d97706; }
+.priority-badge.low { background-color: #f0fdf4; color: #16a34a; }
+
+/* AI Metric segment styles */
+.score-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.score-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.score-label svg { color: #0d9488; }
+
+.score-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Market Gaps descriptions layout block */
+.service-gap {
+  margin-bottom: 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  display: flex;
+  gap: 4px;
+}
+
+.gap-tag-prefix {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.gap-text {
+  color: #334155;
+  margin: 0;
+}
+
+/* Select Container Custom Menu elements */
+.select-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pipeline-select {
+  width: 100%;
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 28px 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.pipeline-select:hover {
+  border-color: #94a3b8;
+}
+
+.pipeline-select:focus {
+  border-color: #0f172a;
+}
+
+.select-arrow-icon {
+  position: absolute;
+  right: 10px;
+  color: #64748b;
+  pointer-events: none;
+  transform: rotate(90deg);
+}
+
+/* Animations configurations */
+.spinner-loader {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Responsive Layout Configurations Breakpoints --- */
+@media (max-width: 1200px) {
+  .pipeline-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .pipeline-page {
+    padding: 24px;
+  }
+  
+  /* Enables side horizontal scroll container overflow on tablet views */
+  .kanban-board {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    gap: 16px;
+    min-height: 60vh;
+  }
+  
+  .kanban-column {
+    min-width: 260px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pipeline-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

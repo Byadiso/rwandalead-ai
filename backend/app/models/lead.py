@@ -30,6 +30,11 @@ class Lead(Base):
 
     rating = Column(String)
 
+    review_count = Column(
+    Integer,
+    default=0
+)
+
     opportunity_score = Column(Integer)
 
     priority = Column(String)

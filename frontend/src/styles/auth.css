@@ -1,0 +1,221 @@
+/* Full Viewport Layout Configuration */
+.auth-viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  padding: 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Centralized Sign up Component Block */
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.03), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+}
+
+/* Header & Identity Elements */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.auth-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.02em;
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Clean Dynamic Alert Banners */
+.feedback-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.feedback-banner.success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.feedback-banner.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.feedback-banner svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Clean Form Component Tree (Replaces <br/> tokens completely) */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Icon Overlaid Input Containers */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px 10px 42px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Absolute Password Mask Button Overlay */
+.password-toggle-btn {
+  position: absolute;
+  right: 4px;
+  height: calc(100% - 8px);
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.password-toggle-btn:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+/* Focus and Disabled State Variations */
+.input-wrapper input:focus {
+  border-color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.06);
+}
+
+.input-wrapper input:disabled {
+  background-color: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Submission CTA Interaction Node */
+.auth-submit-btn {
+  width: 100%;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background-color: #1e293b;
+}
+
+.auth-submit-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Footer Router Link Items */
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.auth-footer p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.auth-footer a {
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Component Level Animations */
+.spinner-loader {
+  animation: rotateSpin 1s linear infinite;
+}
+
+@keyframes rotateSpin {
+  to { transform: rotate(360deg); }
+}

@@ -17,3 +17,8 @@ python-multipart
 
 pydantic
 pydantic-settings
+
+playwright
+
+celery
+redis

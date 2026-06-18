@@ -1,0 +1,321 @@
+/* Container Spacing layout specs */
+.leads-page {
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Quick Metrics counters row styling */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.stat-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Priority status markers design overrides */
+.border-high { border-left: 3px solid #ef4444; }
+.border-medium { border-left: 3px solid #f59e0b; }
+.border-low { border-left: 3px solid #10b981; }
+.color-high { color: #ef4444; }
+.color-medium { color: #d97706; }
+.color-low { color: #10b981; }
+.text-high { color: #fca5a5; }
+.text-medium { color: #fcd34d; }
+.text-low { color: #a7f3d0; }
+.icon-subtle { color: #94a3b8; }
+
+/* Filter Actions Sub-bar detailing */
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 380px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px 10px 40px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05);
+}
+
+/* Split screen layout paneling rules */
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.leads-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Luxury Interactive Workspace Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f8fafc;
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Selected Active Row Design Accentuation */
+.table tbody tr.selected-row {
+  background-color: #f0fdfa;
+}
+
+.table tbody tr.selected-row td {
+  border-bottom-color: #ccfbf1;
+}
+
+/* Custom Table Internal Row Sub-elements formatting */
+.business-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.business-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.selected-row .business-avatar {
+  background-color: #e6fdf9;
+  color: #0d9488;
+}
+
+.business-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.business-city {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+.priority-badge.high { background-color: #fef2f2; color: #ef4444; }
+.priority-badge.medium { background-color: #fffbeb; color: #b45309; }
+.priority-badge.low { background-color: #f0fdf4; color: #15803d; }
+
+.score-cell-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.text-teal { color: #0d9488; }
+
+.table-gap-txt {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Custom Dropdown select button element metrics override */
+.stage-select {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.stage-select:focus {
+  border-color: #0f172a;
+}
+
+/* Sidebar Context Analytics Card panel positioning rules */
+.intelligence-panel {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(100vh - 80px);
+}
+
+.panel-inner-scroller {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.empty-panel-state {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.empty-panel-state h3 {
+  font-size: 16px;
+  color: #0f172a;
+  margin: 12px 0 6px 0;
+}
+
+.empty-panel-state p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.table-loading, .table-empty {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* --- Media Queries Breakpoints for Fluid Responsiveness --- */
+@media (max-width: 1200px) {
+  .workspace-grid {
+    grid-template-columns: 1fr; /* Fall back to clean single column stacked list on viewport shrinkage */
+  }
+  .intelligence-panel {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .leads-page {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 48px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

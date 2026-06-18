@@ -8,8 +8,9 @@ from app.models.user import User
 from app.models.campaign import Campaign
 from app.models.lead import Lead
 
-from app.api.outreach import router as outreach_router
 
+from app.api.outreach import router as outreach_router
+from app.api.discovery import router as discovery_router
 
 from app.api.campaigns import router as campaign_router
 from app.api.auth import router as auth_router
@@ -45,6 +46,8 @@ app.include_router(leads_router)
 
 app.include_router(analysis_router)
 app.include_router(outreach_router)
+
+app.include_router(discovery_router)
 
 
 @app.get("/")

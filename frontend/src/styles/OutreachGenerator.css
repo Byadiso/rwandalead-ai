@@ -1,0 +1,216 @@
+/* Core Styling Matrix Container rules */
+.outreach-premium-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
+}
+
+.outreach-header {
+  margin-bottom: 20px;
+}
+
+.outreach-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.outreach-title h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.text-purple { color: #8b5cf6; }
+
+.outreach-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Modern Segmented Segment Tabs Switch Panel */
+.outreach-tabs {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: #0f172a;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+/* Copy Tools Inline Dashboard Controls Row Layout */
+.pane-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.pane-meta-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.copy-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.copy-action-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+/* Active copy action toggle success styles */
+.copy-action-btn.success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #16a34a;
+}
+
+/* Premium Textarea Display Input Panel formatting */
+.outreach-textarea {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #334155;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.outreach-textarea:focus {
+  border-color: #cbd5e1;
+}
+
+/* Status state elements layout wrappers */
+.outreach-state-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  color: #64748b;
+}
+
+.outreach-state-box.loading p {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.outreach-state-box.error p {
+  color: #ef4444;
+  font-weight: 500;
+  font-size: 13px;
+  margin: 10px 0 16px 0;
+}
+
+.text-red { color: #ef4444; }
+
+.retry-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.retry-action-btn:hover {
+  background-color: #1e293b;
+}
+
+/* Animation scripts definitions */
+.spinner-loader {
+  animation: spinAction 1s linear infinite;
+}
+
+@keyframes spinAction {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Media Queries Responsive Configurations --- */
+@media (max-width: 576px) {
+  .outreach-premium-card {
+    padding: 16px;
+  }
+  .outreach-tabs {
+    flex-direction: column;
+    padding: 6px;
+  }
+  .tab-btn {
+    padding: 10px;
+  }
+  .pane-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .copy-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -13,6 +13,8 @@ class LeadCreate(BaseModel):
 
     rating: str
 
+    review_count: int
+
     opportunity_score: int
 
     priority: str
@@ -33,6 +35,8 @@ class LeadResponse(BaseModel):
     website: str
 
     rating: str
+
+    review_count: int
 
     opportunity_score: int
 

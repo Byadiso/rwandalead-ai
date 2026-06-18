@@ -1,0 +1,286 @@
+/* Core Styling & Responsive Layout Framework */
+.analysis-premium-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Empty, Loading, and Error States styling */
+.analysis-state-card {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.state-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  background: #f1f5f9;
+  color: #64748b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.analysis-state-card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.analysis-state-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.state-spinner {
+  color: #0f766e;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.error-icon {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.retry-btn {
+  margin-top: 16px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Premium Header styling */
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.badge-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdfa;
+  color: #0d9488;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.header-meta h2 {
+  font-size: 22px;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.02em;
+}
+
+.header-meta p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Score Dynamic Circle Widget */
+.score-circle {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+}
+
+.score-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.score-label {
+  font-size: 10px;
+  color: #14b8a6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Grid splits */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.analysis-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.section-title-row h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin: 0;
+}
+
+.title-icon { flex-shrink: 0; }
+.text-red { color: #ef4444; }
+.text-teal { color: #0d9488; }
+
+/* Custom Rows/Lists details */
+.analysis-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.analysis-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bullet-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.red-dot { background-color: #ef4444; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15); }
+.teal-dot { background-color: #14b8a6; box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15); }
+
+.list-text {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Financial Card Block detailing */
+.deal-valuation-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.deal-icon-bg {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.deal-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.deal-value-row {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.currency-symbol {
+  color: #0f172a;
+  margin-right: 1px;
+}
+
+.deal-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+/* --- Media Queries for Perfect Responsiveness --- */
+@media (max-width: 768px) {
+  .analysis-grid {
+    grid-template-columns: 1fr; /* Collapses two columns to stack nicely */
+    gap: 16px;
+  }
+  
+  .analysis-premium-card {
+    padding: 20px;
+  }
+  
+  .analysis-header {
+    flex-direction: column-reverse; /* Put the match score block on top on mobile layouts */
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .score-circle {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .score-number { font-size: 16px; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
